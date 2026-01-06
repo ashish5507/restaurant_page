@@ -1,79 +1,122 @@
-GoldenRuppee Cafee
+# GoldenRuppee Cafee
 
-GoldenRuppee Cafee is a simple restaurant homepage built as part of The Odin Project curriculum.
-The goal of this project is to practice JavaScript-based DOM manipulation, module bundling using Webpack, and tab-based navigation without page reloads.
+GoldenRuppee Cafee is a dynamic restaurant website created as part of
+The Odin Project's JavaScript curriculum. The purpose of this project
+is to practice DOM manipulation, ES6 modules, and Webpack by generating
+all page content using JavaScript instead of static HTML.
 
-All the main page content is dynamically rendered using JavaScript, while styling is handled separately using CSS.
+The website uses tab-based navigation to switch between different
+sections without reloading the page.
 
-Project Overview
+---
 
-This project demonstrates how a single-page restaurant website can be structured using JavaScript modules. Instead of switching between HTML files, the application dynamically updates the content area based on user interaction.
+## Live Demo
 
-The website includes:
+https://<your-github-username>.github.io/<your-repo-name>/
 
-A landing (Home) page
+---
 
-An Outlets section
+## Project Goals
 
-A Contacts section
+- Practice building a single-page application using vanilla JavaScript
+- Learn how to structure a project using ES6 modules
+- Use Webpack to bundle JavaScript, CSS, images, and fonts
+- Dynamically render page content using DOM manipulation
+- Implement tabbed navigation without page reloads
 
-Navigation between these sections is done using buttons placed inside a fixed header.
+---
 
-Technologies Used
+## Features
 
-HTML5
+- Dynamic content rendering using JavaScript only
+- Separate modules for Home, Outlets, and Contacts tabs
+- Webpack asset handling for images and custom fonts
+- Clean and responsive layout using Flexbox
+- GitHub Pages deployment using the `gh-pages` branch
 
-CSS3
+---
 
-JavaScript (ES6 Modules)
+## Technologies Used
 
-Webpack
+- HTML5
+- CSS3
+- JavaScript (ES6 Modules)
+- Webpack
+- npm
 
-npm
+---
 
-Features
+## Project Structure
 
-Dynamic DOM rendering using JavaScript only
+restaurant_page/
+├── src/
+│   ├── images/            # Image assets
+│   ├── fonts/             # Custom font files
+│   ├── template.html      # Base HTML template
+│   ├── styles.css         # Styling
+│   ├── index.js           # Entry point and tab logic
+│   ├── home.js            # Home tab module
+│   ├── outlets.js         # Outlets tab module
+│   └── contacts.js        # Contacts tab module
+│
+├── dist/                  # Webpack build output
+├── .gitignore
+├── package.json
+├── webpack.config.js
+└── README.md
 
-Tab-based navigation without page reloads
+---
 
-Modular code structure for scalability
+## How It Works
 
-How It Works
+- `template.html` contains the static header and navigation buttons
+- The `#content` div is kept empty and populated dynamically
+- Each tab (Home, Outlets, Contacts) has its own JavaScript module
+- Clicking a navigation button clears the current content and loads
+  the selected section
+- Webpack bundles all assets into the `dist` folder for deployment
 
-template.html contains the static structure (header, navigation, and an empty content div).
+---
 
-Each page section (Home, Outlets, Contacts) is defined inside its own JavaScript module.
+## Running the Project Locally
 
-Clicking a navigation button clears the existing content and loads the selected tab dynamically.
+1. Clone the repository
+   git clone https://github.com/<your-username>/<repo-name>.git
 
-Webpack bundles JavaScript, CSS, fonts, and images into the dist folder.
+2. Navigate into the project directory
+   cd restaurant_page
 
-Deployment
+3. Install dependencies
+   npm install
 
-The project is deployed using GitHub Pages by pushing the contents of the dist folder to a dedicated gh-pages branch.
+4. Start the development server
+   npx webpack serve
 
-Webpack generates a production-ready build which GitHub Pages serves directly.
+5. Open your browser and visit
+   http://localhost:8080
 
-Learning Outcomes
+---
 
-Through this project, I practiced:
+## Deployment
 
-Structuring JavaScript applications using ES6 modules
+The project is deployed using GitHub Pages.
 
-Webpack configuration and asset management
+The contents of the `dist` folder are pushed to a `gh-pages` branch,
+which GitHub Pages serves as the live site.
 
-DOM manipulation without relying on frameworks
+---
 
-Tab-based UI logic
+## What I Learned
 
-Git and GitHub Pages deployment workflow
+- How to structure a JavaScript project using modules
+- Managing assets like images and fonts with Webpack
+- Dynamically updating the DOM without frameworks
+- Setting up and deploying a Webpack project to GitHub Pages
 
-Acknowledgements
+---
 
-This project was built as part of The Odin Project – JavaScript Course.
+## Acknowledgements
+
+This project was built as part of The Odin Project JavaScript course.
+
 All images used are for educational purposes only.
-
-Asset handling (images and fonts) through Webpack
-
-Responsive layout using Flexbox
